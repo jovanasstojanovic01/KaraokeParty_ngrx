@@ -1,0 +1,30 @@
+<div class="container">
+    <app-top-list></app-top-list>
+
+    <div class="mid">
+        <div class="welcome">
+            <img class="logo" src="../../../assets/mojLogo.png" alt="nesto">
+            
+            <img class="title" src="../../../assets/naziv.png" alt="nesto">
+            
+            <img class="moto" src="../../../assets/moto.png" alt="nesto">
+        </div>
+
+        <div class="getStarted">
+            <button class="buttonGetSinging" (click)="goToKaraokeRoom()">
+                GET SINGING
+            </button>
+        </div>
+
+        <div class="galery">
+            <div class="box">
+                <span *ngFor="let i of pictures; let index = index" [style.--i]="index + 1">
+                    <img class="galeryImage" [src]="'../../../assets/galery/img' + (index + 1) + '.jpg'">
+                </span>
+            </div>
+        </div>
+    </div>
+
+        <app-quiz></app-quiz>
+        
+</div>
